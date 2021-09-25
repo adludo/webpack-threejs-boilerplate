@@ -59,4 +59,4 @@ var WEBGL = {
   },
 }
 
-module.exports = { WEBGL }
+export { WEBGL }
