@@ -3,7 +3,10 @@ import { WEBGL } from './webgl'
 import './modal'
 
 if (WEBGL.isWebGLAvailable()) {
-  var camera, scene, renderer
+  // camera initiation
+  var camera 
+  var scene 
+  var renderer
   var plane
   var mouse,
     raycaster,
@@ -16,7 +19,8 @@ if (WEBGL.isWebGLAvailable()) {
 
   init()
   render()
-
+  
+  // Functions below here
   function init() {
     camera = new THREE.PerspectiveCamera(
       45,
@@ -29,6 +33,8 @@ if (WEBGL.isWebGLAvailable()) {
 
     scene = new THREE.Scene()
     scene.background = new THREE.Color(0xf0f0f0)
+
+
 
     var rollOverGeo = new THREE.BoxBufferGeometry(50, 50, 50)
     rollOverMaterial = new THREE.MeshBasicMaterial({
